@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2D3ED"
+    tools:context=".view.MainActivity">
+
+
+    <EditText
+        android:id="@+id/edt_nome_tarefa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:hint="Nome da Tarefa"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_descricao_tarefa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Descrição da Tarefa"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_nome_tarefa" />
+
+    <Button
+        android:id="@+id/btn_adicionar_tarefa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:padding="16dp"
+        android:text="Adicionar Tarefa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_descricao_tarefa" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTarefas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_adicionar_tarefa"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
